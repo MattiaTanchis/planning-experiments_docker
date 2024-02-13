@@ -66,6 +66,7 @@ RUN cd /home/myuser && \
     sudo chmod -R  734 ../planning-experiments
 
 CMD ["tail", "-f", "/dev/null"]
+#CMD [ "python3" , "/home/myuser/planning-experiments/examples/ENSHP_apptainer_demo.py" ]
 
 
 
