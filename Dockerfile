@@ -58,17 +58,17 @@ RUN apt-get update && \
 
 # Cambia utente predefinito
 USER myuser
+COPY planning-experiments /home/myuser/
 
 RUN cd /home/myuser && \
-    git clone https://github.com/MattiaTanchis/planning-experiments.git && \
     cd planning-experiments && \
     pip3 install . && \ 
     sudo chmod -R  734 ../planning-experiments
-
+COPY planning-experiments /home/myuser/
 #CMD ["tail", "-f", "/dev/null"]
 #CMD [ "python3" , "/home/myuser/planning-experiments/examples/ENSHP_apptainer_demo.py" ]
 
-
+# git clone https://github.com/MattiaTanchis/planning-experiments.git && \
 
 
 
